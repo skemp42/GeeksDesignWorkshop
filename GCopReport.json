@@ -1,0 +1,20 @@
+{
+  "Items": [
+    {
+      "Analyzer": "PropertyToExpressionAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": null,
+      "SentToServer": true,
+      "InstallationName": "STEPHEN"
+    },
+    {
+      "Analyzer": "UnusedMethodsAnalyzer",
+      "OccurrenceCount": 2,
+      "Exceptions": {
+        "ArgumentException": "Value does not fall within the expected range.\r\n\r\nSource:\r\n"
+      },
+      "SentToServer": false,
+      "InstallationName": "STEPHEN"
+    }
+  ]
+}
