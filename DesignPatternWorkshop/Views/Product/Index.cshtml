@@ -1,4 +1,4 @@
-@model IEnumerable<DesignPatternWorkshop.Model.Product>
+@model IEnumerable<Domain.Entities.ProductData>
 
     @{
     ViewData["Title"] = "Index";
@@ -21,9 +21,12 @@
                         @Html.DisplayFor(modelItem => item.Name)
                     </td>
                     <td>
-                        
+                        <form asp-action="AddToBasket">
+                            <input type="hidden" name="Id" value="@item.Id" />
+                            <input type="submit" value="Add to basket" class="btn btn-primary"/>
+                        </form>
                     </td>
                 </tr>
-}
+            }
         </tbody>
     </table>

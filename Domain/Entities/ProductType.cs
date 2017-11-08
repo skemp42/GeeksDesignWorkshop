@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Domain.Interfaces;
 
 namespace Domain.Entities
 {
-    public class Product : ProductData
+    public enum ProductType
     {
-        public IStockChecker StockChecker { get; set; }
+        Digital,
+        Physical
     }
-
 }

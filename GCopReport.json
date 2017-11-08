@@ -9,11 +9,9 @@
     },
     {
       "Analyzer": "UnusedMethodsAnalyzer",
-      "OccurrenceCount": 2,
-      "Exceptions": {
-        "ArgumentException": "Value does not fall within the expected range.\r\n\r\nSource:\r\n"
-      },
-      "SentToServer": false,
+      "OccurrenceCount": 10,
+      "Exceptions": null,
+      "SentToServer": true,
       "InstallationName": "STEPHEN"
     }
   ]

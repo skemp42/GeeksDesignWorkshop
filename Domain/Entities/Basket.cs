@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using Domain.Interfaces;
 
 namespace Domain.Entities
 {
-    public class Product : ProductData
+    public class Basket : List<Product>
     {
-        public IStockChecker StockChecker { get; set; }
     }
-
 }
