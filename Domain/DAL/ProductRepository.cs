@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Utilities;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Domain.DAL
 {
@@ -12,24 +15,7 @@ namespace Domain.DAL
     {
         public static IEnumerable<ProductData> GetAll()
         {
-            return new List<ProductData>
-            {
-               new ProductData{
-                 Id = 1,
-                 Name = "Nightmare before christmas VHS",
-                 Type = ProductType.Physical
-                },
-               new ProductData{
-                   Id = 2,
-                   Name = "Nike Trainers",
-                   Type = ProductType.Physical
-               },
-               new ProductData{
-                   Id = 3,
-                   Name = "Ed Sheeran Album (MP3)",
-                   Type = ProductType.Digital
-               }
-            };
+            return JsonConvert.DeserializeObject<ProductData[]>(File.ReadAllText("Data/products.json"));
         }
 
         public static ProductData FindById(int id)

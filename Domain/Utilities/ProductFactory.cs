@@ -30,7 +30,7 @@ namespace Domain.Utilities
                         Id = id,
                         Name = data.Name,
                         Type = data.Type,
-                        StockChecker = new PhysicalStockChecker()
+                        StockChecker = new PhysicalStockChecker(id)
                     };
             }
 

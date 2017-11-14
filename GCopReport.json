@@ -9,9 +9,27 @@
     },
     {
       "Analyzer": "UnusedMethodsAnalyzer",
-      "OccurrenceCount": 10,
+      "OccurrenceCount": 12,
       "Exceptions": null,
       "SentToServer": true,
+      "InstallationName": "STEPHEN"
+    },
+    {
+      "Analyzer": "IEnumerableMultipleEvaluationsAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": {
+        "ArgumentException": "Syntax node is not within syntax tree\r\n\r\nSource:\r\npublic static T Get<T>(this ISession session, string key)\r\n{\r\n    var value = session.GetString(key);\r\n    return value == null ? default (T) : JsonConvert.DeserializeObject<T>(value);\r\n}"
+      },
+      "SentToServer": false,
+      "InstallationName": "STEPHEN"
+    },
+    {
+      "Analyzer": "LongMethodAnalyzer",
+      "OccurrenceCount": 1,
+      "Exceptions": {
+        "ArgumentException": "Syntax node is not within syntax tree\r\n\r\nSource:\r\n"
+      },
+      "SentToServer": false,
       "InstallationName": "STEPHEN"
     }
   ]
