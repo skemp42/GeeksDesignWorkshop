@@ -15,7 +15,7 @@ namespace Domain.DAL
     {
         public static IEnumerable<ProductData> GetAll()
         {
-            return JsonConvert.DeserializeObject<ProductData[]>(File.ReadAllText("Data/products.json"));
+            return JsonConvert.DeserializeObject<ProductData[]>(File.ReadAllText("../Data/products.json"));
         }
 
         public static ProductData FindById(int id)

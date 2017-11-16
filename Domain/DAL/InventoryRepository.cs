@@ -15,7 +15,7 @@ namespace Domain.DAL
     {
         public static IEnumerable<InventoryItem> GetAll()
         {
-            return JsonConvert.DeserializeObject<InventoryItem[]>(File.ReadAllText("Data/inventory.json"));
+            return JsonConvert.DeserializeObject<InventoryItem[]>(File.ReadAllText("../Data/inventory.json"));
         }
 
         public static InventoryItem FindByProductId(int id)
