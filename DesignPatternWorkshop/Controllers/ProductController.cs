@@ -23,9 +23,11 @@ namespace DesignPatternWorkshop.Controllers
         [HttpPost]
         public IActionResult AddToBasket([FromForm] int id)
         {
+            Logger.Log($"Request to add product to basket with id: {id}");
             var product = ProductFactory.CreateProduct(id);
             if (product.StockChecker.GetStock() <= 0)
             {
+                Logger.Log($"Product {id} out of stock.");
                 ViewData["Error"] = "Out of stock";
                 return RedirectToAction("Index");
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.DAL;
+using Domain.Utilities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -37,6 +38,9 @@ namespace DesignPatternWorkshop
                 options.IdleTimeout = TimeSpan.FromSeconds(10);
                 options.CookieHttpOnly = true;
             });
+
+            Logger.RegisterLogger(new DebugLogger());
+            Logger.RegisterLogger(new FileLogger());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
