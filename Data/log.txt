@@ -1,2 +1,28 @@
 Request to add product to basket with id: 1
 Request to add product to basket with id: 1
+Request to add product to basket with id: 1
+Request to add product to basket with id: 2
+Product 2 out of stock.
+Request to add product to basket with id: 2
+Product 2 out of stock.
+Request to add product to basket with id: 3
+Request to add product to basket with id: 2
+Product 2 out of stock.
+Request to add product to basket with id: 1
+Request to add product to basket with id: 2
+Product 2 out of stock.
+Request to add product to basket with id: 2
+Product 2 out of stock.
+Request to add product to basket with id: 1
+Request to add product to basket with id: 3
+Request to add product to basket with id: 2
+Product 2 out of stock.
+Request to add product to basket with id: 1
+Request to add product to basket with id: 1
+Request to add product to basket with id: 3
+Request to add product to basket with id: 1
+Request to add product to basket with id: 1
+Request to add product to basket with id: 1
+Request to add product to basket with id: 1
+Request to add product to basket with id: 1
+Request to add product to basket with id: 1

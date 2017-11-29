@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DesignPatternWorkshop.Models;
 using Domain.DAL;
 using Domain.Entities;
 using Domain.Utilities;
@@ -32,21 +33,13 @@ namespace DesignPatternWorkshop.Controllers
                 return RedirectToAction("Index");
             }
 
-            var basket = GetBasket();
+            var basket = BasketManager.GetBasket(HttpContext);
             basket.Add(product);
             HttpContext.Session.SetString("basket", new BasketStringDecorator(basket).ConvertToString());
 
             return RedirectToAction("Index");
         }
 
-        private Basket GetBasket()
-        {
-            var basketString = HttpContext.Session.GetString("basket");
 
-            if (basketString == null)
-                return new Basket();
-
-            return BasketStringDecorator.ConvertFromString(basketString);
-        }
     }
 }
