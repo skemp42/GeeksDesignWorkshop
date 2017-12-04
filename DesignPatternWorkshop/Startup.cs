@@ -41,6 +41,7 @@ namespace DesignPatternWorkshop
 
             Logger.RegisterLogger(new DebugLogger());
             Logger.RegisterLogger(new FileLogger());
+            InventoryObserver.RegisterListener(new OutOfStockEmailer());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

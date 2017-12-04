@@ -32,7 +32,16 @@ namespace Domain.Utilities
                 return;
 
             var item = InventoryRepository.FindByProductId(product.Id);
+
+            if (item.Quantity == 0)
+                return;
+
             InventoryRepository.UpdateQuantity(product.Id, item.Quantity - 1);
+
+            if (item.Quantity == 1)
+            {
+                InventoryObserver.OutOfStock(product.Id);
+            }
         }
     }
 

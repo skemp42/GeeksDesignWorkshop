@@ -29,8 +29,9 @@ namespace DesignPatternWorkshop.Controllers
             if (product.StockChecker.GetStock() <= 0)
             {
                 Logger.Log($"Product {id} out of stock.");
-                ViewData["Error"] = "Out of stock";
-                return RedirectToAction("Index");
+                ViewBag.Error = "Out of stock";
+                var products = ProductRepository.GetAll();
+                return View("Index", products);
             }
 
             var basket = BasketManager.GetBasket(HttpContext);
